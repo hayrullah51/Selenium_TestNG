@@ -55,6 +55,8 @@ public class C04_DependsOn {
         Assert.assertEquals(arananText, "Nutella", "Istedigimiz arama yapilmadi!!!");
     }
 
+    //eger 3 test veya daha fazlasi birbirine dependson ile baglandi ise
+    // 3. yu calistirmak istedigimizde zincir reaksiyon calisip 1.ye gitmez
     @Test(dependsOnMethods = "test02")
     public void test03() {
         driver.findElement(By.xpath("(//span[@class='a-size-base a-color-base a-text-normal'])[1]")).click();
